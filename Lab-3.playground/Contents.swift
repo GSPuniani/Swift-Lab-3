@@ -54,8 +54,8 @@ func fibo(n: Int) -> [Int] {
     return fiboNums
 }
 
-print(fibo(n: 7))
-print(fibo(n: 5))
+print(fibo(n: 7)) //[1, 1, 2, 3, 5, 8, 13]
+print(fibo(n: 5)) //[1, 1, 2, 3, 5]
 
 
 // Problem 4
@@ -73,7 +73,7 @@ func powersOfTwo(N: Int) -> [Int] {
     return powers
 }
 
-print(powersOfTwo(N: 100))
+print(powersOfTwo(N: 100)) //[1, 2, 4, 8, 16, 32, 64]
 
 // Problem 5
 
@@ -89,3 +89,18 @@ studentsTracksCount(coursesStudents: coursesAndStudents)
 
 
 // Problem 6
+
+func firstAndLast(intArray: [Int]) -> Bool {
+//    Return true only if the first and last elements are the same in an array of minimum size 1; otherwise, return false
+    if intArray.count >= 1 {
+        let firstInt = intArray[0]
+        let lastInt = intArray[intArray.count - 1]
+        if firstInt == lastInt {
+            return true
+        }
+    }
+    return false
+}
+
+print(firstAndLast(intArray: [1, 2, 3])) //false
+print(firstAndLast(intArray: [1, 2, 1])) //true
