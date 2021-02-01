@@ -77,9 +77,9 @@ print(powersOfTwo(N: 100)) //[1, 2, 4, 8, 16, 32, 64]
 
 // Problem 5
 
-var coursesAndStudents = ["MOB": 30, "BEW": 40, "FEW": 30, "DS": 40]
+var coursesAndStudents = [("MOB", 30), ("BEW", 40), ("FEW", 30), ("DS", 40)]
 
-func studentsTracksCount(coursesStudents: [String: Int]) {
+func studentsTracksCount(coursesStudents: [(String, Int)]) {
     for (course, studentCount) in coursesStudents {
         print("There are \(studentCount) students in the \(course) track.")
     }
@@ -138,9 +138,22 @@ print(reverseArray(forwardArray: [1, 2, 3])) //[3, 2, 1]
 // Problem 9
 
 func uniqueLetters(inputString: String) -> Bool {
+//    Iterate through the input string and add each character to a set to check for uniqueness
+//    If the set already contains that letter, then the string does not have only unique letters
+    var charsSet: Set<Character> = []
+    for char in inputString {
+        if charsSet.contains(char) {
+            return false
+        }
+        else {
+            charsSet.insert(char)
+        }
+    }
     return true
 }
 
+print(uniqueLetters(inputString: "Hello world")) //false
+print(uniqueLetters(inputString: "true")) //true
 
 // Problem 10
 
@@ -159,3 +172,5 @@ print(charCount(inputString: "apples", targetChar: "p")) //2
 
 
 // Problem 11
+
+// Treat the 5x5 input array as a 1-D array of size 25
