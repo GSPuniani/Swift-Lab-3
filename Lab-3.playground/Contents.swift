@@ -61,8 +61,31 @@ print(fibo(n: 5))
 // Problem 4
 
 func powersOfTwo(N: Int) -> [Int] {
+    // Begin with 1, and compare each subsequent power of two with input before adding to array and incrementing exponent
     var exponent: Int = 0
     var powers: [Int] = []
-    
+    var twoPower: Int = 1
+    while twoPower <= N {
+        powers += [twoPower]
+        twoPower *= 2
+        exponent += 1
+    }
     return powers
 }
+
+print(powersOfTwo(N: 100))
+
+// Problem 5
+
+var coursesAndStudents = ["MOB": 30, "BEW": 40, "FEW": 30, "DS": 40]
+
+func studentsTracksCount(coursesStudents: [String: Int]) {
+    for (course, studentCount) in coursesStudents {
+        print("There are \(studentCount) students in the \(course) track.")
+    }
+}
+
+studentsTracksCount(coursesStudents: coursesAndStudents)
+
+
+// Problem 6
