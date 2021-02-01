@@ -137,4 +137,25 @@ print(reverseArray(forwardArray: [1, 2, 3])) //[3, 2, 1]
 
 // Problem 9
 
+func uniqueLetters(inputString: String) -> Bool {
+    return true
+}
 
+
+// Problem 10
+
+func charCount(inputString: String, targetChar: Character) -> Int {
+//    Initialize the count at 0, the increment it when the target character appears while traversing the input string
+    var count: Int = 0
+    for char in inputString {
+        if char == targetChar {
+            count += 1
+        }
+    }
+    return count
+}
+
+print(charCount(inputString: "apples", targetChar: "p")) //2
+
+
+// Problem 11
