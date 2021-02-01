@@ -104,3 +104,37 @@ func firstAndLast(intArray: [Int]) -> Bool {
 
 print(firstAndLast(intArray: [1, 2, 3])) //false
 print(firstAndLast(intArray: [1, 2, 1])) //true
+
+
+// Problem 7
+
+func arraySum(intArray: [Int]) -> Int {
+//    Initialize sum to 0, then iterate through array and add each integer to the sum
+    var sum: Int = 0
+    for num in intArray {
+        sum += num
+    }
+    return sum
+}
+
+print(arraySum(intArray: [1, 2, 3, 4])) //10
+
+
+// Problem 8
+
+func reverseArray(forwardArray: [Int]) -> [Int] {
+//    Add elements from input array to output array by iterating from right to left
+    var reverseArray: [Int] = []
+    let lenArray: Int = forwardArray.count
+    for i in 1...lenArray {
+        reverseArray.append(forwardArray[lenArray - i])
+    }
+    return reverseArray
+}
+
+print(reverseArray(forwardArray: [1, 2, 3])) //[3, 2, 1]
+
+
+// Problem 9
+
+
