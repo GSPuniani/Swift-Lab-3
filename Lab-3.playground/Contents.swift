@@ -24,7 +24,7 @@ var colors = ["red", "orange", "purple", "pink", "blue", "red", "green", "red", 
 
 var colorDict: [String: Int] = [:]
 
-// Add new colors to the dictionary with color count of 1, otherwise increment the color's count by 1
+// Add new colors to the dictionary with color count of 1, otherwise increment existing color's count by 1
 for color in colors {
     if colorDict[color] == nil {
         colorDict[color] = 1
@@ -41,7 +41,7 @@ for (color, count) in colorDict {
 
 // Problem 3
 
-// Initialize the array with element 1, then add the sum previous element and the last element to the end of array
+// Initialize the array with element 1, then add the sum of previous element and the last element to the end of array
 func fibo(n: Int) -> [Int] {
     var fiboNums: [Int] = [1]
     var counter: Int = 1
@@ -138,8 +138,8 @@ print(reverseArray(forwardArray: [1, 2, 3])) //[3, 2, 1]
 // Problem 9
 
 func uniqueLetters(inputString: String) -> Bool {
-//    Iterate through the input string and add each character to a set to check for uniqueness
-//    If the set already contains that letter, then the string does not have only unique letters
+//    Iterate through the input string and add each character to a set to check for uniqueness.
+//    If the set already contains that letter, then the string does not have only unique letters.
     var charsSet: Set<Character> = []
     for char in inputString {
         if charsSet.contains(char) {
@@ -154,6 +154,7 @@ func uniqueLetters(inputString: String) -> Bool {
 
 print(uniqueLetters(inputString: "Hello world")) //false
 print(uniqueLetters(inputString: "true")) //true
+
 
 // Problem 10
 
