@@ -75,6 +75,7 @@ func powersOfTwo(N: Int) -> [Int] {
 
 print(powersOfTwo(N: 100)) //[1, 2, 4, 8, 16, 32, 64]
 
+
 // Problem 5
 
 var coursesAndStudents = [("MOB", 30), ("BEW", 40), ("FEW", 30), ("DS", 40)]
