@@ -173,4 +173,16 @@ print(charCount(inputString: "apples", targetChar: "p")) //2
 
 // Problem 11
 
-// Treat the 5x5 input array as a 1-D array of size 25
+func evenRowsSum(inputArray: [Int]) -> Int {
+    // Treat the 5x5 input array as a 1-D array of size 25
+    // Use integer division to find even rows of 5x5 matrix by index
+    var sum: Int = 0
+    for i in 0..<inputArray.count {
+        if (i / 5) % 2 == 0 {
+            sum += inputArray[i]
+        }
+    }
+    return sum
+}
+
+print(evenRowsSum(inputArray: [0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 0, 2, 4, 6, 8, 0, 3, 6, 9, 12, 0, 4, 8, 12, 16])) //60
